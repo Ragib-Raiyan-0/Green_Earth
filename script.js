@@ -62,7 +62,7 @@ function renderPlants(plantsList) {
             <p class="desc">${plant.description.substring(0,80)}...</p>
             <div class="footer">
             <span class="tag">${plant.category}</span>
-            <span class="price">tk${plant.price}</span>
+            <span class="price">${plant.price} tk</span>
                     </div>
                     <button class="btn add" data-id="${plant.id}">Add to Cart</button>
             </div>
@@ -95,10 +95,10 @@ function renderCart() {
     cart.forEach((item, idx) => {
         total += item.price;
         const li = document.createElement("li");
-        li.innerHTML = `${item.name} - tk${item.price} <button class="remove" data-index="${idx}">x</button>`;
+        li.innerHTML = `${item.name} - ${item.price} tk<button class="remove" data-index="${idx}">x</button>`;
         cartItemsEl.appendChild(li);
     });
-    cartTotalEl.textContent = `Total: tk${total}`;
+    cartTotalEl.textContent = `Total: ${total} tk`;
     document.querySelectorAll(".remove").forEach(btn => {
         btn.addEventListener("click", () => {
             cart.splice(btn.dataset.index, 1);
@@ -124,7 +124,7 @@ async function openModal(id) {
     modalTitle.textContent = plant.name;
     modalDesc.textContent = plant.description;
     modalCategory.textContent = plant.category;
-    modalPrice.textContent = `tk${plant.price}`;
+    modalPrice.textContent = `${plant.price} tk`;
     modal.style.display = "flex";
 }
 
