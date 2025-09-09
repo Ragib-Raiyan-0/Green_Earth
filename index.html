@@ -24,5 +24,124 @@
         </nav>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="/assets/hero-leaf1.png" alt="Leaf Decoration">
+        <div class="hero-content">
+            <h1>Plant a Tree, Grow a Future</h1>
+            <p>Join our mission to plant 1 million trees and make the Earth greener for future generations.</p>
+            <button class="btn secondary">Get Involved</button>
+        </div>
+        <img src="/assets/hero-leaf2.png" alt="Leaf Decoration">
+    </section>
 
+    <!-- Tree Shop -->
+    <section id="trees" class="tree">
+        <h1>Choose Your Trees</h1>
+        <div class="container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h3>Categories</h3>
+                <ul id="categories">
+                    <li class="active">All Trees</li>
+                </ul>
+            </aside>
+
+            <!-- Products -->
+            <main class="main">
+                <h2>Available Trees</h2>
+                <div id="products" class="products">
+                    <!-- Dynamic tree cards will appear here -->
+                </div>
+            </main>
+
+            <!-- Cart -->
+            <aside class="cart">
+                <h3>Your Cart</h3>
+                <ul id="cart-items"></ul>
+                <div class="total" id="cart-total">Total: tk0</div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- About Campaign -->
+    <section id="about" class="campaign">
+        <h1>About the Campaign</h1>
+        <div class="about">
+            <img src="/assets/about.png" alt="Tree Plantation">
+            <div>
+                <p>Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our
+                    start,
+                    we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests,
+                    create habitats for wildlife, and combat global warming.</p>
+                <ul>
+                    <li>Restoration of natural habitats</li>
+                    <li>Improvement of air quality</li>
+                    <li>Support for local communities</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="impact">
+        <h2>Our Impact</h2>
+        <div class="impact-cards">
+            <div class="card">
+                <h3>500K+</h3>
+                <p>Trees Planted</p>
+            </div>
+            <div class="card">
+                <h3>120+</h3>
+                <p>Communities Involved</p>
+            </div>
+            <div class="card">
+                <h3>30+</h3>
+                <p>Countries Reached</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="cta">
+        <h2>Plant a Tree Today</h2>
+        <form class="donation-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email Address" required>
+            <select required>
+                <option value="" disabled selected>Number of Trees</option>
+                <option>1</option>
+                <option>5</option>
+                <option>10</option>
+                <option>20</option>
+            </select>
+            <button type="submit" class="btn primary">Donate Now</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Green Earth. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <img id="modal-img" src="" alt="">
+            <h3 id="modal-title"></h3>
+            <span id="modal-category" class="tag"></span>
+            <p id="modal-desc"></p>
+            <span id="modal-price" class="price"></span>
+        </div>
+    </div>
+
+    <!-- Spinner -->
+    <div id="spinner" class="spinner" style="display:none;">
+        <div class="loading"></div>
+    </div>
+
+    <script src="/script.js"></script>
 </body>
+
+</html>
